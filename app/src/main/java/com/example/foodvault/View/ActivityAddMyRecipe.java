@@ -195,7 +195,7 @@ public class ActivityAddMyRecipe extends AppCompatActivity {
                 else {
                     // create recipe
                     Recipe r = new Recipe(name, ingredientsList, steps, category, nutrition, servings, time, cuisine, calorie, description);
-                    UserDetails ud = Controller.UserData.retrieveUserWithUsername(ActivityLogin.currentUserLogIn);
+                    UserDetails ud = Controller.UserData.retrieveUserByUsername(ActivityLogin.currentUserLogIn);
 
                     Controller.RecipeData.addUserRecipe(ud, r);
                     Toast.makeText(view.getContext(),"Recipe added successfully.", Toast.LENGTH_SHORT).show();

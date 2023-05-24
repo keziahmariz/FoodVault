@@ -40,11 +40,18 @@ public class RecipeCatalogue {
 
     }
 
+
+
+
     // Retrieve a recipe object from a specific user's recipe list
     public Recipe retrieveUserRecipe(UserDetails user, String myRecipe) {
-        for (Recipe r: user.getMyRecipes()) {
-            if (r.getRecipeName().equalsIgnoreCase(myRecipe)) {
-                return r;
+        if (user.getMyRecipes() == null) {
+
+        } else {
+            for (Recipe r: user.getMyRecipes()) {
+                if (r.getRecipeName().equalsIgnoreCase(myRecipe)) {
+                    return r;
+                }
             }
         }
         return null;
@@ -100,6 +107,7 @@ public class RecipeCatalogue {
             ingStringArr[index] = ingredient.getIngredientName();
             index++;
         }
+
 
         int counter = 0;
         for (Recipe r: recipeList) {

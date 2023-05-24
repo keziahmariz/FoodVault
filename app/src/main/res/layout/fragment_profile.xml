@@ -38,9 +38,10 @@
         android:layout_height="27dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/profile_username_bg"
+        android:clickable="true"
         android:fontFamily="@font/roboto_medium"
-        android:text="username"
         android:gravity="center"
+        android:text="username"
         android:textColor="@color/md_theme_dark_onTertiary"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
@@ -72,20 +73,23 @@
         app:layout_constraintTop_toBottomOf="@+id/usernameText" />
 
     <ImageButton
-        android:layout_width="29dp"
+        android:src="@drawable/menu_icon"
+        android:id="@+id/imageButton"
+        android:layout_width="30dp"
         android:layout_height="33dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
-        android:src="@drawable/menu_icon"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProf"
-        android:layout_width="match_parent"
-        android:layout_height="261dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

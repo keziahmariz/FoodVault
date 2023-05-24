@@ -33,11 +33,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         // retrieve recipe data base
-        try {
-            Controller.loadFromFile(this);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
 
         checkLogin = findViewById(R.id.loginButton);
         createAcc = findViewById(R.id.createAccButton);
@@ -64,6 +60,11 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.loginButton) {
+            try {
+                Controller.loadFromFile(this);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
 //            loginStuff = new LoginStuff(this);
             if(Controller.UserData.retrieveUserDetails(usern.getText().toString(),pass.getText().toString()) != null){
                 currentUserLogIn = usern.getText().toString();

@@ -55,7 +55,7 @@ public class ActivityViewRecipe extends AppCompatActivity {
             String recipeName = intent.getStringExtra("recipe");
             Recipe recipeTemp = Controller.RecipeData.retrieveRecipeByName(recipeName);
             if (recipeTemp == null) {
-                UserDetails us = Controller.UserData.retrieveUserWithUsername(ActivityLogin.currentUserLogIn);
+                UserDetails us = Controller.UserData.retrieveUserByUsername(ActivityLogin.currentUserLogIn);
                 recipeTemp = Controller.RecipeData.retrieveUserRecipe(us,recipeName);
             }
 

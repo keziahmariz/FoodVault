@@ -271,7 +271,7 @@ public class Controller {
             String[] mainParts = line.split("#"); // # is delimiter for user and recipe
             String user = mainParts[0]; // user is at index 0;
             // retrieve user
-            UserDetails userPerson = Controller.UserData.retrieveUserWithUsername(user);
+            UserDetails userPerson = Controller.UserData.retrieveUserByUsername(user);
 
             // index 1 are all list of recipes in a form of string with delimiter = "@"
             if (mainParts.length == 1) {
@@ -330,7 +330,7 @@ public class Controller {
             String[] mainParts = line.split("#"); // # is delimiter for user and recipe
             String user = mainParts[0]; // user is at index 0;
             // retrieve user
-            UserDetails userPerson = Controller.UserData.retrieveUserWithUsername(user);
+            UserDetails userPerson = Controller.UserData.retrieveUserByUsername(user);
 
             // index 1 are all list of recipes in a form of string with delimiter = "@"
             if (mainParts.length == 1) {

@@ -42,7 +42,7 @@ public class FragmentWrite extends Fragment {
         });
 
         // my recipe list to show
-        UserDetails currentUser = Controller.UserData.retrieveUserWithUsername(ActivityLogin.currentUserLogIn);
+        UserDetails currentUser = Controller.UserData.retrieveUserByUsername(ActivityLogin.currentUserLogIn);
         myRecipes = currentUser.getMyRecipes();
 
         // show list

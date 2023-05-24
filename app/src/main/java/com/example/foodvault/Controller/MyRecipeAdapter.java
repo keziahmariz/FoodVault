@@ -58,7 +58,7 @@ public class MyRecipeAdapter extends RecyclerView.Adapter<MyRecipeAdapter.MyHold
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UserDetails us = Controller.UserData.retrieveUserWithUsername(ActivityLogin.currentUserLogIn);
+                UserDetails us = Controller.UserData.retrieveUserByUsername(ActivityLogin.currentUserLogIn);
                 Controller.RecipeData.deleteUserRecipe(us, name);
 
                 ActivityHome.createMyRecipeSuccess = true;
